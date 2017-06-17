@@ -51,7 +51,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logInPushed:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="orE-cg-K02"/>
-                                    <segue destination="UvI-Zs-IVn" kind="show" identifier="logInSegway" id="CI0-ud-cTz"/>
+                                    <segue destination="UvI-Zs-IVn" kind="show" identifier="logInSegway" id="2nW-hs-Lwm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGg-Kc-wO2">

@@ -51,13 +51,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         passwordField.text = ""
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false
+    }
+    
     @IBAction func logInPushed(_ sender: UIButton, forEvent event: UIEvent) {
         username = usernameField.text!
         
         if (usernameField.text != "" && passwordField.text != "") {
-            FIRAuth.auth()?.signIn(withEmail: usernameField.text!, password: passwordField.text!, completion: { (user, error) in
+            Auth.auth().signIn(withEmail: usernameField.text!, password: passwordField.text!, completion: { (user, error) in
                 if (user != nil) {
                     print("SIGNED INNNNNNNN")
+                    self.performSegue(withIdentifier: "logInSegway", sender: self)
                 } else {
                     if let myError = error?.localizedDescription {
                         print(myError)
@@ -67,8 +72,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 }
             })
         }
-        
-        performSegue(withIdentifier: "logInSegway", sender: self)
     }
     
     @IBAction func createAccountPushed(_ sender: UIButton, forEvent event: UIEvent) {

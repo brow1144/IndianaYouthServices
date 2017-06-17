@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 
 class createAccountViewController: UIViewController, UITextFieldDelegate {
@@ -17,8 +18,11 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var createButton: UIButton!
     
+    var ref = Database.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     
         createButton.layer.borderWidth = 0
         
@@ -64,9 +68,16 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
     @IBAction func createAccountAction(_ sender: UIButton, forEvent event: UIEvent) {
         
         if (nameField.text != "" && passwordField.text != "" && emailField.text != "") {
-            FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!, completion: { (user, error) in
+            Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!, completion: { (user, error) in
                 if (user != nil) {
                     print("CREATEDDDDD UPPPPPP")
+                    self.ref = Database.database().reference()
+                    
+                    let x = self.nameField.text!
+                
+                    self.ref.child(x).childByAutoId().setValue(self.emailField.text)
+                    self.ref.child(x).child("password").childByAutoId().setValue(self.passwordField.text)
+                    
                 } else {
                     if let myError = error?.localizedDescription {
                         print(myError)
