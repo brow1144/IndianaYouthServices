@@ -14,9 +14,10 @@ var handle:DatabaseHandle?
 var ref:DatabaseReference?
 
 class mainViewController: UIViewController {
-
+    
     @IBOutlet var label: UILabel!
     
+    @IBOutlet var fontAwesomeIcon: UILabel!
     @IBOutlet var passwordLabel: UILabel!
     
     override func viewDidLoad() {
@@ -40,11 +41,19 @@ class mainViewController: UIViewController {
 //                self.passwordLabel.text = item
 //            }
 //        })
+//                var faicon = [String: unichar]()
+//                faicon["famusic"] = 0xf001
+//                self.fontAwesomeIcon.font = UIFont(name: "FontAwesome", size: 20)!
+//                self.fontAwesomeIcon.text = String(format: "%C", faicon["famusic"]!)
     
     }
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    @IBAction func myPageButton(_ sender: Any) {
+    
     }
 
     override func didReceiveMemoryWarning() {

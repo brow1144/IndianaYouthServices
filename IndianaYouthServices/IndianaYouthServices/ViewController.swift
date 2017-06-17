@@ -27,8 +27,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         loginButton.layer.cornerRadius = 4
         
         usernameField.attributedPlaceholder = NSAttributedString(string: usernameField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
-        
         passwordField.attributedPlaceholder = NSAttributedString(string: passwordField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
+        
+//        var faicon = [String: unichar]()
+//        faicon["famusic"] = 0xf001
+//        self.fontAwesome.font = UIFont(name: "FontAwesome", size: 20)
+//        self.fontAwesome.text = String(format: "%C", faicon["famusic"]!)
         
         self.usernameField.delegate = self
         self.passwordField.delegate = self

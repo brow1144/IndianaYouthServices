@@ -19,6 +19,7 @@
 		2B8360061EF506A00039E9FA /* education.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8360041EF506A00039E9FA /* education.png */; };
 		2B8360071EF506A00039E9FA /* housing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B8360051EF506A00039E9FA /* housing.jpg */; };
 		2B8360091EF50E740039E9FA /* finance.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8360081EF50E740039E9FA /* finance.png */; };
+		2B83600B1EF519B60039E9FA /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B83600A1EF519B60039E9FA /* fontawesome-webfont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		2B8360041EF506A00039E9FA /* education.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = education.png; sourceTree = "<group>"; };
 		2B8360051EF506A00039E9FA /* housing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = housing.jpg; sourceTree = "<group>"; };
 		2B8360081EF50E740039E9FA /* finance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finance.png; sourceTree = "<group>"; };
+		2B83600A1EF519B60039E9FA /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		924911BBF554624171547060 /* Pods_IndianaYouthServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IndianaYouthServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AB8BB997FBF6CAB5C403E8 /* Pods-IndianaYouthServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndianaYouthServices.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IndianaYouthServices/Pods-IndianaYouthServices.debug.xcconfig"; sourceTree = "<group>"; };
 		CAB9BC4E3AC329ABECAB0412 /* Pods-IndianaYouthServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndianaYouthServices.release.xcconfig"; path = "Pods/Target Support Files/Pods-IndianaYouthServices/Pods-IndianaYouthServices.release.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		2B835FDA1EF4AD6F0039E9FA = {
 			isa = PBXGroup;
 			children = (
+				2B83600A1EF519B60039E9FA /* fontawesome-webfont.ttf */,
 				2B835FE51EF4AD6F0039E9FA /* IndianaYouthServices */,
 				2B835FE41EF4AD6F0039E9FA /* Products */,
 				3105A4D9EFBC0246F0BCE723 /* Pods */,
@@ -174,6 +177,7 @@
 				2B8360061EF506A00039E9FA /* education.png in Resources */,
 				2B8360031EF4DAD30039E9FA /* GoogleService-Info.plist in Resources */,
 				2B835FEE1EF4AD6F0039E9FA /* Assets.xcassets in Resources */,
+				2B83600B1EF519B60039E9FA /* fontawesome-webfont.ttf in Resources */,
 				2B835FEC1EF4AD6F0039E9FA /* Main.storyboard in Resources */,
 				2B8360071EF506A00039E9FA /* housing.jpg in Resources */,
 			);
