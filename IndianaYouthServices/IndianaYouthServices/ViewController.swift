@@ -10,9 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var backgroundImage: UIImageView!
+    
+    @IBOutlet var passwordField: UITextField!
+    @IBOutlet var usernameField: UITextField!
+    
+    @IBOutlet var createAccountButton: UIButton!
+    @IBOutlet var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        loginButton.layer.cornerRadius = 4
+        loginButton.backgroundColor = UIColor.orange
+        loginButton.setTitleColor(UIColor.white, for: .normal)
+        
+        //test 2
+ 
     }
 
     override func didReceiveMemoryWarning() {
