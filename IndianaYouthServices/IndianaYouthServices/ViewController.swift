@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 var username = ""
 
@@ -52,6 +53,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func logInPushed(_ sender: UIButton, forEvent event: UIEvent) {
         username = usernameField.text!
+        
+        if (usernameField.text != "" && passwordField.text != "") {
+            FIRAuth.auth()?.signIn(withEmail: usernameField.text!, password: passwordField.text!, completion: { (user, error) in
+                if (user != nil) {
+                    print("SIGNED INNNNNNNN")
+                } else {
+                    if let myError = error?.localizedDescription {
+                        print(myError)
+                    } else {
+                        print("ERROR!")
+                    }
+                }
+            })
+        }
+        
         performSegue(withIdentifier: "logInSegway", sender: self)
     }
     

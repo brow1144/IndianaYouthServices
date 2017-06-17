@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class createAccountViewController: UIViewController, UITextFieldDelegate {
 
@@ -61,12 +62,21 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func createAccountAction(_ sender: UIButton, forEvent event: UIEvent) {
-    
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        if (nameField.text != "" && passwordField.text != "" && emailField.text != "") {
+            FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!, completion: { (user, error) in
+                if (user != nil) {
+                    print("CREATEDDDDD UPPPPPP")
+                } else {
+                    if let myError = error?.localizedDescription {
+                        print(myError)
+                    } else {
+                        print("ERROR!")
+                    }
+                }
+            })
+        }
+        
     }
 }
 

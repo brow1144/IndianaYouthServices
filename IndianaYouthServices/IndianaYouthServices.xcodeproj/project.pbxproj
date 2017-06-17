@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0ADAEFABB595CD0FC6839C /* Pods_IndianaYouthServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924911BBF554624171547060 /* Pods_IndianaYouthServices.framework */; };
 		2B835FE71EF4AD6F0039E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B835FE61EF4AD6F0039E9FA /* AppDelegate.swift */; };
 		2B835FE91EF4AD6F0039E9FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B835FE81EF4AD6F0039E9FA /* ViewController.swift */; };
 		2B835FEC1EF4AD6F0039E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B835FEA1EF4AD6F0039E9FA /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		2B835FF11EF4AD6F0039E9FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B835FEF1EF4AD6F0039E9FA /* LaunchScreen.storyboard */; };
 		2B835FFD1EF4BEBA0039E9FA /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B835FFC1EF4BEBA0039E9FA /* mainViewController.swift */; };
 		2B835FFF1EF4C2EB0039E9FA /* createAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B835FFE1EF4C2EB0039E9FA /* createAccountViewController.swift */; };
+		2B8360031EF4DAD30039E9FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B8360021EF4DAD30039E9FA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		2B835FF21EF4AD6F0039E9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B835FFC1EF4BEBA0039E9FA /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mainViewController.swift; path = ../mainViewController.swift; sourceTree = "<group>"; };
 		2B835FFE1EF4C2EB0039E9FA /* createAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createAccountViewController.swift; sourceTree = "<group>"; };
+		2B8360021EF4DAD30039E9FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		924911BBF554624171547060 /* Pods_IndianaYouthServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IndianaYouthServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0AB8BB997FBF6CAB5C403E8 /* Pods-IndianaYouthServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndianaYouthServices.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IndianaYouthServices/Pods-IndianaYouthServices.debug.xcconfig"; sourceTree = "<group>"; };
+		CAB9BC4E3AC329ABECAB0412 /* Pods-IndianaYouthServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndianaYouthServices.release.xcconfig"; path = "Pods/Target Support Files/Pods-IndianaYouthServices/Pods-IndianaYouthServices.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0ADAEFABB595CD0FC6839C /* Pods_IndianaYouthServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				2B835FE51EF4AD6F0039E9FA /* IndianaYouthServices */,
 				2B835FE41EF4AD6F0039E9FA /* Products */,
+				3105A4D9EFBC0246F0BCE723 /* Pods */,
+				DC18A0542FE6B4E8B9ED64E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +75,26 @@
 				2B835FED1EF4AD6F0039E9FA /* Assets.xcassets */,
 				2B835FEF1EF4AD6F0039E9FA /* LaunchScreen.storyboard */,
 				2B835FF21EF4AD6F0039E9FA /* Info.plist */,
+				2B8360021EF4DAD30039E9FA /* GoogleService-Info.plist */,
 			);
 			path = IndianaYouthServices;
+			sourceTree = "<group>";
+		};
+		3105A4D9EFBC0246F0BCE723 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0AB8BB997FBF6CAB5C403E8 /* Pods-IndianaYouthServices.debug.xcconfig */,
+				CAB9BC4E3AC329ABECAB0412 /* Pods-IndianaYouthServices.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC18A0542FE6B4E8B9ED64E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				924911BBF554624171547060 /* Pods_IndianaYouthServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B835FF51EF4AD6F0039E9FA /* Build configuration list for PBXNativeTarget "IndianaYouthServices" */;
 			buildPhases = (
+				3DE11E2D2E7071E9D452FEFA /* [CP] Check Pods Manifest.lock */,
 				2B835FDF1EF4AD6F0039E9FA /* Sources */,
 				2B835FE01EF4AD6F0039E9FA /* Frameworks */,
 				2B835FE11EF4AD6F0039E9FA /* Resources */,
+				09E739AA37E9B4E2C795B346 /* [CP] Embed Pods Frameworks */,
+				33D841C0548550F0510DF382 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +161,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B835FF11EF4AD6F0039E9FA /* LaunchScreen.storyboard in Resources */,
+				2B8360031EF4DAD30039E9FA /* GoogleService-Info.plist in Resources */,
 				2B835FEE1EF4AD6F0039E9FA /* Assets.xcassets in Resources */,
 				2B835FEC1EF4AD6F0039E9FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09E739AA37E9B4E2C795B346 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IndianaYouthServices/Pods-IndianaYouthServices-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33D841C0548550F0510DF382 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IndianaYouthServices/Pods-IndianaYouthServices-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DE11E2D2E7071E9D452FEFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B835FDF1EF4AD6F0039E9FA /* Sources */ = {
@@ -267,6 +346,7 @@
 		};
 		2B835FF61EF4AD6F0039E9FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0AB8BB997FBF6CAB5C403E8 /* Pods-IndianaYouthServices.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6R43YP984W;
@@ -280,6 +360,7 @@
 		};
 		2B835FF71EF4AD6F0039E9FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAB9BC4E3AC329ABECAB0412 /* Pods-IndianaYouthServices.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6R43YP984W;
