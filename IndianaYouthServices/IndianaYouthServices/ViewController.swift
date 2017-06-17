@@ -29,14 +29,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         createAccountButton.setTitleColor(UIColor.white, for: .normal)
         
-        mainLabel.font = UIFont(name: "Avenir-Light", size: 60)
+        mainLabel.font = UIFont(name: "Avenir-Light", size: 70)
         
         self.usernameField.delegate = self
         self.passwordField.delegate = self
-    }
-
-    @IBAction func usernameReturn(_ sender: UITextField) {
-
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
