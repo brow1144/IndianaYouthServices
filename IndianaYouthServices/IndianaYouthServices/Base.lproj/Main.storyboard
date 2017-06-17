@@ -663,9 +663,13 @@
                                                     <segue destination="hqV-Z4-woG" kind="presentation" identifier="personalInfo" id="ofu-Z5-Gav"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6s-iL-eGv">
-                                                <rect key="frame" x="281" y="8" width="65" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6s-iL-eGv">
+                                                <rect key="frame" x="302" y="8" width="65" height="30"/>
+                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.18674511119631901" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="FeH-Hv-oXh"/>
+                                                    <constraint firstAttribute="width" constant="65" id="PXA-3x-sFR"/>
+                                                </constraints>
                                                 <state key="normal" title="Log Out"/>
                                                 <connections>
                                                     <action selector="logOutButton:" destination="UvI-Zs-IVn" eventType="touchUpInside" id="2dY-wx-4tY"/>
@@ -694,6 +698,7 @@
                                             <constraint firstAttribute="trailing" secondItem="7HF-Lz-2c5" secondAttribute="trailing" constant="115" id="KpC-1b-bpy"/>
                                             <constraint firstItem="q7F-Wu-Xxo" firstAttribute="leading" secondItem="IuG-wD-mMJ" secondAttribute="leading" constant="28" id="Kr8-YE-3vA"/>
                                             <constraint firstItem="pS4-Ej-er0" firstAttribute="top" secondItem="0i9-rX-qbn" secondAttribute="bottom" constant="12" id="MBb-d4-DAS"/>
+                                            <constraint firstAttribute="trailing" secondItem="J6s-iL-eGv" secondAttribute="trailing" constant="8" id="MOQ-FY-Pqr"/>
                                             <constraint firstItem="CoG-Qf-OJo" firstAttribute="leading" secondItem="IuG-wD-mMJ" secondAttribute="leading" constant="26" id="MWF-hx-PAo"/>
                                             <constraint firstItem="aZq-bP-Gr9" firstAttribute="leading" secondItem="IuG-wD-mMJ" secondAttribute="leading" constant="40" id="MeF-ex-hvN"/>
                                             <constraint firstItem="aZq-bP-Gr9" firstAttribute="top" secondItem="cwk-YB-u5F" secondAttribute="bottom" constant="36" id="ROQ-TV-s7E"/>
@@ -716,6 +721,7 @@
                                             <constraint firstItem="7HF-Lz-2c5" firstAttribute="leading" secondItem="89a-Bc-I5K" secondAttribute="trailing" constant="56" id="vgY-sr-1IT"/>
                                             <constraint firstAttribute="trailing" secondItem="aZq-bP-Gr9" secondAttribute="trailing" constant="233" id="wI9-Y3-3pd"/>
                                             <constraint firstItem="0i9-rX-qbn" firstAttribute="top" secondItem="hxg-bq-wS2" secondAttribute="bottom" constant="47" id="wzM-KS-pXj"/>
+                                            <constraint firstItem="J6s-iL-eGv" firstAttribute="top" secondItem="IuG-wD-mMJ" secondAttribute="top" constant="8" id="ytX-KG-cYA"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -739,6 +745,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="mainTitle" destination="7HF-Lz-2c5" id="oEN-ZQ-aPH"/>
                         <outlet property="personIcon" destination="89a-Bc-I5K" id="67l-bz-mkm"/>
                     </connections>
                 </viewController>

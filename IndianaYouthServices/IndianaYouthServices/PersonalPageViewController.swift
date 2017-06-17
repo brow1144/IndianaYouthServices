@@ -32,11 +32,11 @@ class PersonalPageViewController: UIViewController, UIImagePickerControllerDeleg
             dbRef?.observe(.childAdded, with: { (snapshot) in
                 let x = Storage.storage()
                 let storageRef = x.reference(forURL: "gs://indianayouthservices.appspot.com").child(userID!)
-                storageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
+                storageRef.getData(maxSize: 1 * 10000 * 10000) { (data, error) -> Void in
                     if (data != nil ) {
-                    let pic = UIImage(data: data!)
-                    self.driverLicenseImg.image = pic
-                    }
+                        let pic = UIImage(data: data!)
+                        self.driverLicenseImg.image = pic
+                    } 
                 }
             })
     }

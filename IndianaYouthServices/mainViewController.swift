@@ -14,6 +14,7 @@ var handle:DatabaseHandle?
 var ref:DatabaseReference?
 
 class mainViewController: UIViewController {
+    @IBOutlet var mainTitle: UILabel!
     
     @IBOutlet var label: UILabel!
     
@@ -23,6 +24,15 @@ class mainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let userID = Auth.auth().currentUser?.uid
+        let ref = Database.database().reference()
+        ref.child(userID!).observeSingleEvent(of: .value, with: {(snapshot) in
+            let Dict = snapshot.value as! NSDictionary
+            //print(Dict.value(forKey: "name")!)
+            self.mainTitle.text = Dict.value(forKey: "name")! as! String
+        })
 
     }
     
