@@ -21,6 +21,7 @@
 		2B8360091EF50E740039E9FA /* finance.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8360081EF50E740039E9FA /* finance.png */; };
 		2B83600B1EF519B60039E9FA /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B83600A1EF519B60039E9FA /* fontawesome-webfont.ttf */; };
 		2B83600D1EF5262B0039E9FA /* createAcctountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83600C1EF5262B0039E9FA /* createAcctountDetailsViewController.swift */; };
+		2B83600F1EF533090039E9FA /* PersonalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83600E1EF533090039E9FA /* PersonalPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		2B8360081EF50E740039E9FA /* finance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finance.png; sourceTree = "<group>"; };
 		2B83600A1EF519B60039E9FA /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		2B83600C1EF5262B0039E9FA /* createAcctountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createAcctountDetailsViewController.swift; sourceTree = "<group>"; };
+		2B83600E1EF533090039E9FA /* PersonalPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalPageViewController.swift; sourceTree = "<group>"; };
 		924911BBF554624171547060 /* Pods_IndianaYouthServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IndianaYouthServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AB8BB997FBF6CAB5C403E8 /* Pods-IndianaYouthServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndianaYouthServices.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IndianaYouthServices/Pods-IndianaYouthServices.debug.xcconfig"; sourceTree = "<group>"; };
 		CAB9BC4E3AC329ABECAB0412 /* Pods-IndianaYouthServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndianaYouthServices.release.xcconfig"; path = "Pods/Target Support Files/Pods-IndianaYouthServices/Pods-IndianaYouthServices.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				2B835FFC1EF4BEBA0039E9FA /* mainViewController.swift */,
 				2B835FFE1EF4C2EB0039E9FA /* createAccountViewController.swift */,
 				2B83600C1EF5262B0039E9FA /* createAcctountDetailsViewController.swift */,
+				2B83600E1EF533090039E9FA /* PersonalPageViewController.swift */,
 				2B835FEA1EF4AD6F0039E9FA /* Main.storyboard */,
 				2B835FED1EF4AD6F0039E9FA /* Assets.xcassets */,
 				2B8360041EF506A00039E9FA /* education.png */,
@@ -245,6 +248,7 @@
 				2B83600D1EF5262B0039E9FA /* createAcctountDetailsViewController.swift in Sources */,
 				2B835FE91EF4AD6F0039E9FA /* ViewController.swift in Sources */,
 				2B835FE71EF4AD6F0039E9FA /* AppDelegate.swift in Sources */,
+				2B83600F1EF533090039E9FA /* PersonalPageViewController.swift in Sources */,
 				2B835FFD1EF4BEBA0039E9FA /* mainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

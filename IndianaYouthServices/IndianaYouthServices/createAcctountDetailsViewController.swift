@@ -13,6 +13,7 @@ class createAcctountDetailsViewController: UIViewController, UITextFieldDelegate
 
     @IBOutlet var ageField: UITextField!
     @IBOutlet var fosterField: UITextField!
+    @IBOutlet var genderField: UITextField!
     @IBOutlet var finishSignButton: UIButton!
     
     var ref = Database.database().reference()
@@ -26,8 +27,11 @@ class createAcctountDetailsViewController: UIViewController, UITextFieldDelegate
         
         fosterField.attributedPlaceholder = NSAttributedString(string: fosterField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
         
+        genderField.attributedPlaceholder = NSAttributedString(string: genderField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
+        
         self.ageField.delegate = self
         self.fosterField.delegate = self
+        self.genderField.delegate = self
     }
 
     override var prefersStatusBarHidden: Bool {
@@ -56,6 +60,12 @@ class createAcctountDetailsViewController: UIViewController, UITextFieldDelegate
         }
     }
     
+    @IBAction func removeGenderText(_ sender: UITextField) {
+        if (genderField.text == "Gender") {
+            genderField.text = ""
+        }
+    }
+    
     @IBAction func finishSignUp(_ sender: Any, forEvent event: UIEvent) {
         self.performSegue(withIdentifier: "completeSignUp", sender: self)
         
@@ -64,6 +74,7 @@ class createAcctountDetailsViewController: UIViewController, UITextFieldDelegate
         
         
         self.ref.child(userID!).child("age").setValue(self.ageField.text)
+        self.ref.child(userID!).child("gender").setValue(self.genderField.text)
         self.ref.child(userID!).child("yearEnteringFoster").setValue(self.fosterField.text)
     }
 }

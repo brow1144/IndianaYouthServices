@@ -20,7 +20,7 @@ class mainViewController: UIViewController {
     @IBOutlet var personIcon: UILabel!
 
     @IBOutlet var passwordLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,6 +47,10 @@ class mainViewController: UIViewController {
                 self.personIcon.font = UIFont(name: "FontAwesome", size: 20)!
                 self.personIcon.text = String(format: "%C", faicon["famusers"]!)
     
+    }
+    
+    @IBAction func personalPageButton(_ sender: UIButton, forEvent event: UIEvent) {
+        
     }
     
     override var prefersStatusBarHidden: Bool {
