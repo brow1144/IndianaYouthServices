@@ -42,6 +42,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: "logInSegway", sender: self)
     }
     
+    
+    @IBAction func createAccountPushed(_ sender: UIButton, forEvent event: UIEvent) {
+        performSegue(withIdentifier: "createAccountSegway", sender: self)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
