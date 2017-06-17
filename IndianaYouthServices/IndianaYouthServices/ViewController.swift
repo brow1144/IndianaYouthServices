@@ -8,6 +8,8 @@
 
 import UIKit
 
+var username = ""
+
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var backgroundImage: UIImageView!
@@ -33,6 +35,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.usernameField.delegate = self
         self.passwordField.delegate = self
+    }
+    
+    @IBAction func logInPushed(_ sender: UIButton, forEvent event: UIEvent) {
+        username = usernameField.text!
+        performSegue(withIdentifier: "logInSegway", sender: self)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
