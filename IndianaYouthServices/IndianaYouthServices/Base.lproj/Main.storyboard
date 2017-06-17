@@ -93,10 +93,21 @@
                                     <action selector="removePasswordText:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="hwS-bm-8OW"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPz-pd-3qX">
+                                <rect key="frame" x="59" y="386" width="257" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="NOa-lz-Hhy"/>
+                                    <constraint firstAttribute="width" constant="257" id="WM3-8A-ceo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.015686274510000001" green="0.050980392159999999" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VGg-Kc-wO2" secondAttribute="bottom" constant="20" id="70y-FP-qZY"/>
+                            <constraint firstItem="pXf-PS-jPA" firstAttribute="top" secondItem="FPz-pd-3qX" secondAttribute="bottom" constant="47" id="8md-m9-kqL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U60-SR-qDJ" secondAttribute="trailing" constant="66" id="9ge-ks-xZF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pXf-PS-jPA" secondAttribute="trailing" constant="21" id="RTi-XL-lQe"/>
                             <constraint firstItem="bWn-tN-W53" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="66" id="TjC-Hw-rYC"/>
@@ -105,15 +116,18 @@
                             <constraint firstAttribute="trailingMargin" secondItem="UPQ-JL-vcu" secondAttribute="trailing" constant="43" id="aIu-6Z-rl0"/>
                             <constraint firstItem="pXf-PS-jPA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="cEw-6B-Av2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bWn-tN-W53" secondAttribute="trailing" constant="139" id="cRJ-wx-B93"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FPz-pd-3qX" secondAttribute="trailing" constant="43" id="fn8-a2-Tjt"/>
                             <constraint firstItem="U60-SR-qDJ" firstAttribute="top" secondItem="UPQ-JL-vcu" secondAttribute="bottom" constant="49" id="kON-LP-HXm"/>
                             <constraint firstItem="bWn-tN-W53" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="139" id="kvg-Ui-EBJ"/>
                             <constraint firstItem="VGg-Kc-wO2" firstAttribute="top" secondItem="pXf-PS-jPA" secondAttribute="bottom" constant="79" id="nmK-us-CB6"/>
                             <constraint firstItem="U60-SR-qDJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="tbM-bA-XpT"/>
                             <constraint firstItem="VGg-Kc-wO2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uCq-1u-APT"/>
+                            <constraint firstItem="FPz-pd-3qX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="43" id="zId-Bc-M8C"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="createAccountButton" destination="VGg-Kc-wO2" id="fv9-Yq-CEk"/>
+                        <outlet property="errorLabel" destination="FPz-pd-3qX" id="2Lg-6n-OG5"/>
                         <outlet property="loginButton" destination="pXf-PS-jPA" id="iJU-JG-Gd0"/>
                         <outlet property="mainLabel" destination="bWn-tN-W53" id="HVk-Yv-toz"/>
                         <outlet property="passwordField" destination="U60-SR-qDJ" id="6qW-G5-55o"/>
@@ -194,6 +208,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountAction:forEvent:" destination="WSt-6E-fvH" eventType="touchUpInside" id="1AC-DJ-c1q"/>
+                                    <segue destination="UvI-Zs-IVn" kind="show" identifier="createAccountSucessSegue" id="spQ-Lp-fWw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zW5-zL-MSk">
@@ -286,4 +301,7 @@
             <point key="canvasLocation" x="940" y="-113"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="spQ-Lp-fWw"/>
+    </inferredMetricsTieBreakers>
 </document>

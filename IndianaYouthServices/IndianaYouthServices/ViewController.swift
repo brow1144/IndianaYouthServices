@@ -9,10 +9,9 @@
 import UIKit
 import FirebaseAuth
 
-var username = ""
-
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet var errorLabel: UILabel!
     
     @IBOutlet var mainLabel: UILabel!
     
@@ -55,9 +54,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    @IBAction func logInPushed(_ sender: UIButton, forEvent event: UIEvent) {
-        username = usernameField.text!
-        
+    @IBAction func logInPushed(_ sender: UIButton, forEvent event: UIEvent) {        
         if (usernameField.text != "" && passwordField.text != "") {
             Auth.auth().signIn(withEmail: usernameField.text!, password: passwordField.text!, completion: { (user, error) in
                 if (user != nil) {
@@ -66,8 +63,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 } else {
                     if let myError = error?.localizedDescription {
                         print(myError)
+                        self.errorLabel.text = myError
                     } else {
                         print("ERROR!")
+                        self.errorLabel.text = "We don't recognize that email or password!"
                     }
                 }
             })

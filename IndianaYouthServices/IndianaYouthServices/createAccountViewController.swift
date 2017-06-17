@@ -40,6 +40,10 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
         self.emailField.delegate = self
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -64,7 +68,7 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
     @IBAction func backButton(_ sender: UIButton) {
         performSegue(withIdentifier: "createAccountBackButton", sender: self)
     }
-    
+        
     @IBAction func createAccountAction(_ sender: UIButton, forEvent event: UIEvent) {
         
         if (nameField.text != "" && passwordField.text != "" && emailField.text != "") {
@@ -77,7 +81,7 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
                 
                     self.ref.child(x).childByAutoId().setValue(self.emailField.text)
                     self.ref.child(x).child("password").childByAutoId().setValue(self.passwordField.text)
-                    
+                    self.performSegue(withIdentifier: "createAccountSucessSegue", sender: self)
                 } else {
                     if let myError = error?.localizedDescription {
                         print(myError)

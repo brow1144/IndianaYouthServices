@@ -19,7 +19,7 @@ class mainViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        label.text = username
+        
     }
 
     override func didReceiveMemoryWarning() {
