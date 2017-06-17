@@ -12,7 +12,6 @@ var username = ""
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var backgroundImage: UIImageView!
     
     @IBOutlet var mainLabel: UILabel!
     
@@ -26,15 +25,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         loginButton.layer.cornerRadius = 4
-        loginButton.backgroundColor = UIColor.orange
-        loginButton.setTitleColor(UIColor.white, for: .normal)
-        
-        createAccountButton.setTitleColor(UIColor.white, for: .normal)
         
         mainLabel.font = UIFont(name: "Avenir-Light", size: 70)
         
+        
+        usernameField.attributedPlaceholder = NSAttributedString(string: usernameField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
+        
+        passwordField.attributedPlaceholder = NSAttributedString(string: passwordField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
+        
         self.usernameField.delegate = self
         self.passwordField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    @IBAction func removeUsernameText(_ sender: Any) {
+        usernameField.text = ""
+    }
+    
+    @IBAction func removePasswordText(_ sender: Any) {
+        passwordField.text = ""
     }
     
     @IBAction func logInPushed(_ sender: UIButton, forEvent event: UIEvent) {
@@ -42,14 +55,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: "logInSegway", sender: self)
     }
     
-    
     @IBAction func createAccountPushed(_ sender: UIButton, forEvent event: UIEvent) {
         performSegue(withIdentifier: "createAccountSegway", sender: self)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
     }
 
     override func didReceiveMemoryWarning() {
