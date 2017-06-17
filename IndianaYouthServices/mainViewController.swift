@@ -17,7 +17,8 @@ class mainViewController: UIViewController {
     
     @IBOutlet var label: UILabel!
     
-    @IBOutlet var fontAwesomeIcon: UILabel!
+    @IBOutlet var personIcon: UILabel!
+
     @IBOutlet var passwordLabel: UILabel!
     
     override func viewDidLoad() {
@@ -41,10 +42,10 @@ class mainViewController: UIViewController {
 //                self.passwordLabel.text = item
 //            }
 //        })
-//                var faicon = [String: unichar]()
-//                faicon["famusic"] = 0xf001
-//                self.fontAwesomeIcon.font = UIFont(name: "FontAwesome", size: 20)!
-//                self.fontAwesomeIcon.text = String(format: "%C", faicon["famusic"]!)
+                var faicon = [String: unichar]()
+                faicon["famusers"] = 0xf007
+                self.personIcon.font = UIFont(name: "FontAwesome", size: 20)!
+                self.personIcon.text = String(format: "%C", faicon["famusers"]!)
     
     }
     
