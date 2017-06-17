@@ -29,10 +29,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         usernameField.attributedPlaceholder = NSAttributedString(string: usernameField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
         passwordField.attributedPlaceholder = NSAttributedString(string: passwordField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
         
-//        var faicon = [String: unichar]()
-//        faicon["famusic"] = 0xf001
-//        self.fontAwesome.font = UIFont(name: "FontAwesome", size: 20)
-//        self.fontAwesome.text = String(format: "%C", faicon["famusic"]!)
         
         self.usernameField.delegate = self
         self.passwordField.delegate = self
@@ -85,13 +81,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func createAccountPushed(_ sender: UIButton, forEvent event: UIEvent) {
         performSegue(withIdentifier: "createAccountSegway", sender: self)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
 

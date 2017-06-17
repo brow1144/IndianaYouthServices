@@ -10,8 +10,7 @@ import UIKit
 import Firebase
 
 class PersonalPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-    @IBOutlet var backgroundToImg: UILabel!
+    @IBOutlet var revealImageBtn: UIButton!
     
     @IBOutlet var driversLicenseLabel: UILabel!
     @IBOutlet var driverLicenseImg: UIImageView!
@@ -21,18 +20,26 @@ class PersonalPageViewController: UIViewController, UIImagePickerControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        revealImageBtn.layer.cornerRadius = 10
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    @IBAction func refreshData(_ sender: UIButton) {
+        
         ref = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid
-        
-        
-        
+                    
+            let dbRef = ref?.child(userID!)
+            dbRef?.observe(.childAdded, with: { (snapshot) in
+                let x = Storage.storage()
+                let storageRef = x.reference(forURL: "gs://indianayouthservices.appspot.com").child(userID!)
+                storageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
+                    if (data != nil ) {
+                    let pic = UIImage(data: data!)
+                    self.driverLicenseImg.image = pic
+                    }
+                }
+            })
     }
-    
     
     @IBAction func pickImage(_ sender: Any) {
         
@@ -59,7 +66,6 @@ class PersonalPageViewController: UIViewController, UIImagePickerControllerDeleg
         
         self.present(actionSheet, animated: true, completion: nil)
         
-        self.backgroundToImg.text = ""
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
