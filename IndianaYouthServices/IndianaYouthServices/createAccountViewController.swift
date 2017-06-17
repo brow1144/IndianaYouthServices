@@ -30,10 +30,8 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
         
         //nameField.backgroundColor = UIColor(red: 4/255, green: 13/255, blue: 19/255, alpha: 1.0)
         nameField.attributedPlaceholder = NSAttributedString(string: nameField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
-        
-        passwordField.attributedPlaceholder = NSAttributedString(string: passwordField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
-        
         emailField.attributedPlaceholder = NSAttributedString(string: emailField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
+        passwordField.attributedPlaceholder = NSAttributedString(string: passwordField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
 
         createButton.layer.cornerRadius = 10
 
@@ -65,15 +63,15 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func removeEmailText(_ sender: Any) {
+    @IBAction func removePasswordText(_ sender: Any) {
         if (passwordField.text == "Password") {
-            emailField.text = ""
+            passwordField.text = ""
         }
     }
     
-    @IBAction func removePasswordText(_ sender: Any) {
+    @IBAction func removeEmailText(_ sender: Any) {
         if (emailField.text == "Email") {
-            passwordField.text = ""
+            emailField.text = ""
         }
     }
     
@@ -86,16 +84,15 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
         if (nameField.text != "" && passwordField.text != "" && emailField.text != "") {
             Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!, completion: { (user, error) in
                 if (user != nil) {
-                    print("CREATEDDDDD UPPPPPP")
+                    self.performSegue(withIdentifier: "moreAccountInfo", sender: self)
                     self.ref = Database.database().reference()
                     
                     //let x = self.nameField.text!
                     let userID = Auth.auth().currentUser?.uid
 
-                
+                    self.ref.child(userID!).child("name").setValue(self.nameField.text)
                     self.ref.child(userID!).child("email").setValue(self.emailField.text)
                     self.ref.child(userID!).child("password").setValue(self.passwordField.text)
-                    self.performSegue(withIdentifier: "createAccountSucessSegue", sender: self)
                 } else {
                     if let myError = error?.localizedDescription {
                         print(myError)

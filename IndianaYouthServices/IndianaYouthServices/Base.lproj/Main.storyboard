@@ -208,7 +208,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountAction:forEvent:" destination="WSt-6E-fvH" eventType="touchUpInside" id="1AC-DJ-c1q"/>
-                                    <segue destination="UvI-Zs-IVn" kind="show" identifier="createAccountSucessSegue" id="spQ-Lp-fWw"/>
+                                    <segue destination="JRb-F3-xAm" kind="show" identifier="moreAccountInfo" id="u28-WF-GvY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zW5-zL-MSk">
@@ -217,8 +217,8 @@
                                     <constraint firstAttribute="width" constant="125" id="1HE-mB-rPB"/>
                                     <constraint firstAttribute="height" constant="95.5" id="gD5-Bx-YT0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfo-PZ-wO5">
@@ -283,6 +283,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3V-lp-jf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1094" y="184"/>
+        </scene>
+        <!--Create Acctount Details View Controller-->
+        <scene sceneID="AbE-aW-4p3">
+            <objects>
+                <viewController id="JRb-F3-xAm" customClass="createAcctountDetailsViewController" customModule="IndianaYouthServices" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ts-Bl-g0U"/>
+                        <viewControllerLayoutGuide type="bottom" id="aX7-qO-GYi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tzg-R9-NR4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsQ-B4-uHO">
+                                <rect key="frame" x="125" y="55" width="125" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="138-qS-6gG"/>
+                                    <constraint firstAttribute="width" constant="125" id="cLy-Qv-jKd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Year Enterting Foster Care" borderStyle="roundedRect" placeholder="Year Enterting Foster Care" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A47-ar-IZp">
+                                <rect key="frame" x="70" y="285" width="234" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="IuW-bm-FlT"/>
+                                    <constraint firstAttribute="height" constant="30" id="Jhr-Ep-3K7"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="removeFosterText:" destination="JRb-F3-xAm" eventType="editingDidBegin" id="VT7-Ay-kWO"/>
+                                    <action selector="removeNameText:" destination="WSt-6E-fvH" eventType="editingDidBegin" id="L05-Zw-ddo"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07S-Ey-XiT">
+                                <rect key="frame" x="42" y="513" width="290" height="41"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.81568627449999997" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="BQW-dr-6zh"/>
+                                    <constraint firstAttribute="width" constant="290" id="mYb-np-IYW"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Finish Sign Up">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccountAction:forEvent:" destination="WSt-6E-fvH" eventType="touchUpInside" id="pxc-8p-Cgo"/>
+                                    <action selector="finishSignUp:forEvent:" destination="JRb-F3-xAm" eventType="touchUpInside" id="uVG-5o-GKc"/>
+                                    <segue destination="UvI-Zs-IVn" kind="show" identifier="completeSignUp" id="UXY-nO-Aei"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Age" borderStyle="roundedRect" placeholder="Age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7P-zD-al7">
+                                <rect key="frame" x="100" y="220" width="175" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QdX-1O-p6j"/>
+                                    <constraint firstAttribute="width" constant="175" id="gc8-DM-ZbO"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="removeAgeText:" destination="JRb-F3-xAm" eventType="editingDidBegin" id="ez0-cz-nOa"/>
+                                    <action selector="removeNameText:" destination="WSt-6E-fvH" eventType="editingDidBegin" id="ke3-fI-jUj"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.015686274510000001" green="0.050980392159999999" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="A47-ar-IZp" firstAttribute="leading" secondItem="tzg-R9-NR4" secondAttribute="leadingMargin" constant="54" id="29U-D7-cBm"/>
+                            <constraint firstItem="07S-Ey-XiT" firstAttribute="leading" secondItem="tzg-R9-NR4" secondAttribute="leadingMargin" constant="26" id="38x-by-pqp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vsQ-B4-uHO" secondAttribute="trailing" constant="109" id="FTU-Fn-Ryn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A47-ar-IZp" secondAttribute="trailing" constant="55" id="QXP-A3-hmp"/>
+                            <constraint firstItem="j7P-zD-al7" firstAttribute="leading" secondItem="tzg-R9-NR4" secondAttribute="leadingMargin" constant="84" id="WrU-2B-f3K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="07S-Ey-XiT" secondAttribute="trailing" constant="27" id="fxj-za-FJ6"/>
+                            <constraint firstItem="j7P-zD-al7" firstAttribute="top" secondItem="vsQ-B4-uHO" secondAttribute="bottom" constant="69" id="gFS-iq-agD"/>
+                            <constraint firstItem="aX7-qO-GYi" firstAttribute="top" secondItem="07S-Ey-XiT" secondAttribute="bottom" constant="113" id="mgk-4K-c0X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j7P-zD-al7" secondAttribute="trailing" constant="84" id="r6b-BG-dzu"/>
+                            <constraint firstItem="vsQ-B4-uHO" firstAttribute="leading" secondItem="tzg-R9-NR4" secondAttribute="leadingMargin" constant="109" id="uJt-9i-kTt"/>
+                            <constraint firstItem="vsQ-B4-uHO" firstAttribute="top" secondItem="8ts-Bl-g0U" secondAttribute="bottom" constant="35" id="zbN-aX-OqU"/>
+                            <constraint firstItem="A47-ar-IZp" firstAttribute="top" secondItem="j7P-zD-al7" secondAttribute="bottom" constant="35" id="zqk-vW-bWO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageField" destination="j7P-zD-al7" id="i9E-VZ-DvT"/>
+                        <outlet property="finishSignButton" destination="07S-Ey-XiT" id="Bap-5G-oy7"/>
+                        <outlet property="fosterField" destination="A47-ar-IZp" id="rh7-N9-zgM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TMc-SA-byS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="189.3553223388306"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Pk2-rk-AnT">
@@ -504,7 +602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcV-qc-dZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768.8" y="-283.35832083958024"/>
+            <point key="canvasLocation" x="3271" y="-685"/>
         </scene>
     </scenes>
     <resources>
@@ -513,6 +611,6 @@
         <image name="housing.jpg" width="448" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2nW-hs-Lwm"/>
+        <segue reference="UXY-nO-Aei"/>
     </inferredMetricsTieBreakers>
 </document>
