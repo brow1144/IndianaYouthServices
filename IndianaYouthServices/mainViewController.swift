@@ -15,11 +15,11 @@ var ref:DatabaseReference?
 
 class mainViewController: UIViewController {
     @IBOutlet var mainTitle: UILabel!
-    
     @IBOutlet var label: UILabel!
     
     @IBOutlet var personIcon: UILabel!
-
+    @IBOutlet var lockIcon: UILabel!
+    
     @IBOutlet var passwordLabel: UILabel!
 
     override func viewDidLoad() {
@@ -31,9 +31,22 @@ class mainViewController: UIViewController {
         ref.child(userID!).observeSingleEvent(of: .value, with: {(snapshot) in
             let Dict = snapshot.value as! NSDictionary
             //print(Dict.value(forKey: "name")!)
-            self.mainTitle.text = Dict.value(forKey: "name")! as! String
+            self.mainTitle.text = Dict.value(forKey: "name")! as? String
         })
 
+    }
+    
+    @IBAction func googleHousing(_ sender: Any) {
+        UIApplication.shared.openURL(NSURL(string: "https://affordablehousingonline.com/housing-search/Indiana")! as URL)
+    }
+    
+    @IBAction func googleEducation(_ sender: Any) {
+    UIApplication.shared.openURL(NSURL(string: "http://www.doe.in.gov/")! as URL)
+    }
+    
+    
+    @IBAction func googleFinance(_ sender: Any) {
+    UIApplication.shared.openURL(NSURL(string: "https://financialaidtoolkit.ed.gov/tk/learn.jsp")! as URL)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,6 +54,11 @@ class mainViewController: UIViewController {
         faicon["famusers"] = 0xf007
         self.personIcon.font = UIFont(name: "FontAwesome", size: 20)!
         self.personIcon.text = String(format: "%C", faicon["famusers"]!)
+        
+        faicon = [String: unichar]()
+        faicon["falock"] = 0xf023
+        self.lockIcon.font = UIFont(name: "FontAwesome", size: 20)!
+        self.lockIcon.text = String(format: "%C", faicon["falock"]!)
     
     }
     
