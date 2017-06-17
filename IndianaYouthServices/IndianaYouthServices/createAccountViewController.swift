@@ -77,10 +77,12 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
                     print("CREATEDDDDD UPPPPPP")
                     self.ref = Database.database().reference()
                     
-                    let x = self.nameField.text!
+                    //let x = self.nameField.text!
+                    let userID = Auth.auth().currentUser?.uid
+
                 
-                    self.ref.child(x).childByAutoId().setValue(self.emailField.text)
-                    self.ref.child(x).child("password").childByAutoId().setValue(self.passwordField.text)
+                    self.ref.child(userID!).child("email").setValue(self.emailField.text)
+                    self.ref.child(userID!).child("password").setValue(self.passwordField.text)
                     self.performSegue(withIdentifier: "createAccountSucessSegue", sender: self)
                 } else {
                     if let myError = error?.localizedDescription {
