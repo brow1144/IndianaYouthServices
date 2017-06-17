@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>InidanaYouthServices.xcscheme</key>
+		<key>IndianaYouthServices.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2B835FC21EF4A2420039E9FA</key>
+		<key>2B835FE21EF4AD6F0039E9FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
