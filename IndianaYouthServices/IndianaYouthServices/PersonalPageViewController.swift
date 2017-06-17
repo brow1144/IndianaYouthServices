@@ -18,11 +18,17 @@ class PersonalPageViewController: UIViewController, UIImagePickerControllerDeleg
     
     var ref:DatabaseReference?
     
+    /*
+     * Add button style on load
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         revealImageBtn.layer.cornerRadius = 10
     }
     
+    /*
+     * Refresh button to load database picture for user
+     */
     @IBAction func refreshData(_ sender: UIButton) {
         
         ref = Database.database().reference()
@@ -41,6 +47,9 @@ class PersonalPageViewController: UIViewController, UIImagePickerControllerDeleg
             })
     }
     
+    /*
+     * Allows user to take or place a picture onto the view
+     */
     @IBAction func pickImage(_ sender: Any) {
         
         let imagePickerController = UIImagePickerController()
@@ -68,6 +77,9 @@ class PersonalPageViewController: UIViewController, UIImagePickerControllerDeleg
         
     }
     
+    /*
+     * Brains to picking the pictures or placing them
+     */
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         driverLicenseImg.image = image
@@ -92,22 +104,37 @@ class PersonalPageViewController: UIViewController, UIImagePickerControllerDeleg
         picker.dismiss(animated: true, completion: nil)
     }
     
+    /*
+     * Segue back to main screen
+     */
     @IBAction func backToMain(_ sender: Any) {
         self.performSegue(withIdentifier: "backToMain", sender: self)
     }
     
+    /*
+     * Make pickers dimiss
+     */
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil) 
     }
     
+    /*
+     * Status Items Hidden
+     */
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
+    /*
+     * Do not perform segue immediatly
+     */
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return false
     }
     
+    /*
+     * Return on keyboard should hide keyboard
+     */
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false

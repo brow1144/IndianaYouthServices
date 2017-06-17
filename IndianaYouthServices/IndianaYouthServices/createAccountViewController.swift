@@ -22,9 +22,11 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
     
     var ref = Database.database().reference()
     
+    /*
+     * When view loads make text areas responsive
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     
         createButton.layer.borderWidth = 0
         
@@ -40,45 +42,65 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
         self.emailField.delegate = self
     }
     
+    /*
+     * All status bars hidden
+     */
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
+    /*
+     * Do not switch views immediatly
+     */
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return false
     }
     
+    /*
+     * Return on keyboard hides keyboard
+     */
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-
-    }
-    
+    /*
+     *  Remove name text when typing
+     */
     @IBAction func removeNameText(_ sender: Any) {
         if (nameField.text == "Name") {
             nameField.text = ""
         }
     }
     
+    /*
+     * REmove password text when typing
+     */
     @IBAction func removePasswordText(_ sender: Any) {
         if (passwordField.text == "Password") {
             passwordField.text = ""
         }
     }
     
+    /*
+     * Remove username text when typing
+     */
     @IBAction func removeEmailText(_ sender: Any) {
         if (emailField.text == "Email") {
             emailField.text = ""
         }
     }
     
+    /*
+     * Back button to go back to old view
+     */
     @IBAction func backButton(_ sender: UIButton) {
         performSegue(withIdentifier: "createAccountBackButton", sender: self)
     }
-        
+    
+    /*
+     * Function to log user into firebase and switch views
+     */
     @IBAction func createAccountAction(_ sender: UIButton, forEvent event: UIEvent) {
         
         if (nameField.text != "" && passwordField.text != "" && emailField.text != "") {

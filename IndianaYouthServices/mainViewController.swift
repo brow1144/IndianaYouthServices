@@ -22,6 +22,9 @@ class mainViewController: UIViewController {
     
     @IBOutlet var passwordLabel: UILabel!
 
+    /*
+     * On load make sure username is on top of screen
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,25 +33,35 @@ class mainViewController: UIViewController {
         let ref = Database.database().reference()
         ref.child(userID!).observeSingleEvent(of: .value, with: {(snapshot) in
             let Dict = snapshot.value as! NSDictionary
-            //print(Dict.value(forKey: "name")!)
             self.mainTitle.text = Dict.value(forKey: "name")! as? String
         })
 
     }
     
+    /*
+     * Housing button transfers to website
+     */
     @IBAction func googleHousing(_ sender: Any) {
         UIApplication.shared.openURL(NSURL(string: "https://affordablehousingonline.com/housing-search/Indiana")! as URL)
     }
     
+    /*
+     * Education button transfers to website
+     */
     @IBAction func googleEducation(_ sender: Any) {
     UIApplication.shared.openURL(NSURL(string: "http://www.doe.in.gov/")! as URL)
     }
     
-    
+    /*
+     * Finance button transfers to webstie
+     */
     @IBAction func googleFinance(_ sender: Any) {
     UIApplication.shared.openURL(NSURL(string: "https://financialaidtoolkit.ed.gov/tk/learn.jsp")! as URL)
     }
     
+    /*
+     * Set Font Awesome Fonts
+     */
     override func viewDidAppear(_ animated: Bool) {
         var faicon = [String: unichar]()
         faicon["famusers"] = 0xf007
@@ -62,6 +75,9 @@ class mainViewController: UIViewController {
     
     }
     
+    /*
+     * Log user out and switch views
+     */
     @IBAction func logOutButton(_ sender: Any) {
         try! Auth.auth().signOut()
         performSegue(withIdentifier: "logOutSegway", sender: self)
