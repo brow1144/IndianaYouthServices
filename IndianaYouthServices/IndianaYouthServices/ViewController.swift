@@ -8,15 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet var backgroundImage: UIImageView!
     
-    @IBOutlet var passwordField: UITextField!
-    @IBOutlet var usernameField: UITextField!
+    @IBOutlet var mainLabel: UILabel!
     
-    @IBOutlet var createAccountButton: UIButton!
+    @IBOutlet var usernameField: UITextField!
+    @IBOutlet var passwordField: UITextField!
+    
     @IBOutlet var loginButton: UIButton!
+    @IBOutlet var createAccountButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +27,21 @@ class ViewController: UIViewController {
         loginButton.backgroundColor = UIColor.orange
         loginButton.setTitleColor(UIColor.white, for: .normal)
         
-        //test 2
- 
+        createAccountButton.setTitleColor(UIColor.white, for: .normal)
+        
+        mainLabel.font = UIFont(name: "Avenir-Light", size: 60)
+        
+        self.usernameField.delegate = self
+        self.passwordField.delegate = self
+    }
+
+    @IBAction func usernameReturn(_ sender: UITextField) {
+
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,4 +51,27 @@ class ViewController: UIViewController {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
