@@ -30,6 +30,10 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This way we can store your documents securely for you!</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This way we can get a new document to securely store for you!</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
