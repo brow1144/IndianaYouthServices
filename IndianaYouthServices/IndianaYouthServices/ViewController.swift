@@ -26,9 +26,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         loginButton.layer.cornerRadius = 4
         
-        mainLabel.font = UIFont(name: "Avenir-Light", size: 70)
-        
-        
         usernameField.attributedPlaceholder = NSAttributedString(string: usernameField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
         
         passwordField.attributedPlaceholder = NSAttributedString(string: passwordField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
@@ -37,17 +34,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.passwordField.delegate = self
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
     @IBAction func removeUsernameText(_ sender: Any) {
-        usernameField.text = ""
+        if (usernameField.text == "Email") {
+            usernameField.text = ""
+        }
     }
     
     @IBAction func removePasswordText(_ sender: Any) {
-        passwordField.text = ""
+        if (passwordField.text == "Password") {
+            passwordField.text = ""
+        }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

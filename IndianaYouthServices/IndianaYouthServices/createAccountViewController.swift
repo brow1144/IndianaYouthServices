@@ -16,6 +16,8 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var emailField: UITextField!
     
+    @IBOutlet var errorText: UILabel!
+    
     @IBOutlet var createButton: UIButton!
     
     var ref = Database.database().reference()
@@ -40,6 +42,10 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
         self.emailField.delegate = self
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return false
     }
@@ -54,15 +60,21 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func removeNameText(_ sender: Any) {
-        nameField.text = ""
-    }
-    
-    @IBAction func removePasswordText(_ sender: Any) {
-        passwordField.text = ""
+        if (nameField.text == "Name") {
+            nameField.text = ""
+        }
     }
     
     @IBAction func removeEmailText(_ sender: Any) {
-        emailField.text = ""
+        if (passwordField.text == "Password") {
+            emailField.text = ""
+        }
+    }
+    
+    @IBAction func removePasswordText(_ sender: Any) {
+        if (emailField.text == "Email") {
+            passwordField.text = ""
+        }
     }
     
     @IBAction func backButton(_ sender: UIButton) {
@@ -87,11 +99,15 @@ class createAccountViewController: UIViewController, UITextFieldDelegate {
                 } else {
                     if let myError = error?.localizedDescription {
                         print(myError)
+                        self.errorText.text = myError
                     } else {
                         print("ERROR!")
+                        self.errorText.text = "Create Account Error!"
                     }
                 }
             })
+        } else {
+            self.errorText.text = "Please Fill in All Fields!"
         }
         
     }

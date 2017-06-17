@@ -16,6 +16,9 @@
 		2B835FFD1EF4BEBA0039E9FA /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B835FFC1EF4BEBA0039E9FA /* mainViewController.swift */; };
 		2B835FFF1EF4C2EB0039E9FA /* createAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B835FFE1EF4C2EB0039E9FA /* createAccountViewController.swift */; };
 		2B8360031EF4DAD30039E9FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B8360021EF4DAD30039E9FA /* GoogleService-Info.plist */; };
+		2B8360061EF506A00039E9FA /* education.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8360041EF506A00039E9FA /* education.png */; };
+		2B8360071EF506A00039E9FA /* housing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B8360051EF506A00039E9FA /* housing.jpg */; };
+		2B8360091EF50E740039E9FA /* finance.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8360081EF50E740039E9FA /* finance.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		2B835FFC1EF4BEBA0039E9FA /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mainViewController.swift; path = ../mainViewController.swift; sourceTree = "<group>"; };
 		2B835FFE1EF4C2EB0039E9FA /* createAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createAccountViewController.swift; sourceTree = "<group>"; };
 		2B8360021EF4DAD30039E9FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2B8360041EF506A00039E9FA /* education.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = education.png; sourceTree = "<group>"; };
+		2B8360051EF506A00039E9FA /* housing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = housing.jpg; sourceTree = "<group>"; };
+		2B8360081EF50E740039E9FA /* finance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finance.png; sourceTree = "<group>"; };
 		924911BBF554624171547060 /* Pods_IndianaYouthServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IndianaYouthServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AB8BB997FBF6CAB5C403E8 /* Pods-IndianaYouthServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndianaYouthServices.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IndianaYouthServices/Pods-IndianaYouthServices.debug.xcconfig"; sourceTree = "<group>"; };
 		CAB9BC4E3AC329ABECAB0412 /* Pods-IndianaYouthServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndianaYouthServices.release.xcconfig"; path = "Pods/Target Support Files/Pods-IndianaYouthServices/Pods-IndianaYouthServices.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 				2B835FFE1EF4C2EB0039E9FA /* createAccountViewController.swift */,
 				2B835FEA1EF4AD6F0039E9FA /* Main.storyboard */,
 				2B835FED1EF4AD6F0039E9FA /* Assets.xcassets */,
+				2B8360041EF506A00039E9FA /* education.png */,
+				2B8360051EF506A00039E9FA /* housing.jpg */,
+				2B8360081EF50E740039E9FA /* finance.png */,
 				2B835FEF1EF4AD6F0039E9FA /* LaunchScreen.storyboard */,
 				2B835FF21EF4AD6F0039E9FA /* Info.plist */,
 				2B8360021EF4DAD30039E9FA /* GoogleService-Info.plist */,
@@ -161,9 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B835FF11EF4AD6F0039E9FA /* LaunchScreen.storyboard in Resources */,
+				2B8360091EF50E740039E9FA /* finance.png in Resources */,
+				2B8360061EF506A00039E9FA /* education.png in Resources */,
 				2B8360031EF4DAD30039E9FA /* GoogleService-Info.plist in Resources */,
 				2B835FEE1EF4AD6F0039E9FA /* Assets.xcassets in Resources */,
 				2B835FEC1EF4AD6F0039E9FA /* Main.storyboard in Resources */,
+				2B8360071EF506A00039E9FA /* housing.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

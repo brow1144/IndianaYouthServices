@@ -26,22 +26,25 @@ class mainViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        ref = Database.database().reference()
-        
-        let userID = Auth.auth().currentUser?.uid
-        
-        ref?.child(userID!).child("email").observeSingleEvent(of: .value, with: { (snapshot) in
-            if let item = snapshot.value as? String{
-                self.label.text = item
-            }
-        })
-        
-        ref?.child(userID!).child("password").observeSingleEvent(of: .value, with: { (snapshot) in
-            if let item = snapshot.value as? String{
-                self.passwordLabel.text = item
-            }
-        })
-        
+//        ref = Database.database().reference()
+//        let userID = Auth.auth().currentUser?.uid
+//        
+//        ref?.child(userID!).child("email").observeSingleEvent(of: .value, with: { (snapshot) in
+//            if let item = snapshot.value as? String{
+//                self.label.text = item
+//            }
+//        })
+//        
+//        ref?.child(userID!).child("password").observeSingleEvent(of: .value, with: { (snapshot) in
+//            if let item = snapshot.value as? String{
+//                self.passwordLabel.text = item
+//            }
+//        })
+    
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
     override func didReceiveMemoryWarning() {
